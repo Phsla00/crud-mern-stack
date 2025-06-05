@@ -1,9 +1,10 @@
 import './App.css';
+import User from './components/GetUser/index.jsx';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <User />
     </div>
   );
 }
