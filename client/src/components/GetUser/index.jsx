@@ -4,7 +4,9 @@ import './index.css';
 const User = () => {
     return (
         <div className="user-table">
-            <button type="button" class="btn btn-primary">Add User</button>
+            <button type="button" class="btn btn-primary">
+                <i class="fa-solid fa-user-plus"></i>
+            </button>
             <table className="table table-bordered">
                 <thead>
                     <tr>
@@ -21,7 +23,14 @@ const User = () => {
                         <td>John</td>
                         <td>jonh@gmail.com</td>
                         <td>Canada</td>
-                        <td>Update | Delete</td>
+                        <td className="action-buttons">
+                            <button type="button" class="btn btn-info">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>    
+                        </td>
                     </tr>
                 </tbody>
             </table>
