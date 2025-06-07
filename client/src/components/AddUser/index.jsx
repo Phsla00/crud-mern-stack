@@ -1,22 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 const AddUser = () => {
+    const users = {
+        name: "",
+        email: "",
+        address: "",
+    };
+
+    const [user, setUser] = useState(users);
+    const navigate = useNavigate();
+
+    const inputHandler = (e) => {
+        const { name, value } = e.target;
+        setUser({...user, [name]: value});
+    }
+
+    const submitForm = async(e) => {
+        e.preventDefault();
+        await axios.post("http://localhost:8000/api/user", user)
+        .then((response) => {
+            console.log("User created successfully.");
+            navigate("/");
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }
+
     return (
         <div className="add-user">
-            <Link to="/" type="button" class="btn btn-secondary">
-                <i class="fa-solid fa-arrow-left"></i>
+            <Link to="/" type="button" className="btn btn-secondary">
+                <i className="fa-solid fa-arrow-left"></i>
             </Link>
             <h3>ADD NEW USER</h3>
-            <form className="add-user_form">
+            <form className="add-user_form" onSubmit={submitForm}>
                 <div className="input-group">
                     <label htmlFor="name">Name:</label>
                     <input 
                     type="text"
                     id="name"
+                    onChange={inputHandler}
                     name="name"
-                    autocomplete="off"
+                    autoComplete="off"
                     placeholder="Enter your name"                    
                     />
                 </div>
@@ -25,8 +53,9 @@ const AddUser = () => {
                     <input 
                     type="email"
                     id="email"
+                    onChange={inputHandler}
                     name="email"
-                    autocomplete="off"
+                    autoComplete="off"
                     placeholder="Enter your e-mail"                    
                     />
                 </div>
@@ -35,13 +64,14 @@ const AddUser = () => {
                     <input 
                     type="text"
                     id="address"
+                    onChange={inputHandler}
                     name="address"
-                    autocomplete="off"
+                    autoComplete="off"
                     placeholder="Enter your address"                    
                     />
                 </div>
                 <div className="input-group">
-                    <button type="button" class="btn btn-primary">
+                    <button type="submit" className="btn btn-primary">
                         Submit
                     </button>
                 </div>

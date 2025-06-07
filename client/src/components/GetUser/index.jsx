@@ -19,8 +19,8 @@ const User = () => {
     
     return (
         <div className="user-table">
-            <Link to="/add" type="button" class="btn btn-primary">
-                <i class="fa-solid fa-user-plus"></i>
+            <Link to="/add" type="button" className="btn btn-primary">
+                <i className="fa-solid fa-user-plus"></i>
             </Link>
             <table className="table table-bordered">
                 <thead>
@@ -41,11 +41,11 @@ const User = () => {
                             <td>{user.email}</td>
                             <td>{user.address}</td>
                             <td className="action-buttons">
-                                <button type="button" class="btn btn-info">
-                                    <i class="fa-solid fa-pen-to-square"></i>
+                                <button type="button" className="btn btn-info">
+                                    <i className="fa-solid fa-pen-to-square"></i>
                                 </button>
-                                <button type="button" class="btn btn-danger">
-                                    <i class="fa-solid fa-trash"></i>
+                                <button type="button" className="btn btn-danger">
+                                    <i className="fa-solid fa-trash"></i>
                                 </button>    
                             </td>
                         </tr>
