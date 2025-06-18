@@ -26,3 +26,8 @@
 .action-buttons button {
     margin: 0 10px;
 }
+
+.no-data {
+    margin-top: 20px;
+    text-align: center;
+}
