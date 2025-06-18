@@ -17,15 +17,19 @@
 3. Install dependencies:  
    ```bash
    npm install
-4. Run the server:  
+4. Configure your database:  
+   In .env change the environment variable MONGO_URL to your database.
+5. Run the server:  
    ```bash
    npm start
-5. Enter the client directory:  
+6. Client side:  
+   Ctrl+Shift+T to open a new tab to set the client side.
+7. Enter the client directory:  
    ```bash
    cd ../client
-6. Install dependencies:  
+8. Install dependencies:  
    ```bash
    npm install
-7. Run the client:  
+9. Run the client:  
    ```bash
    npm start
