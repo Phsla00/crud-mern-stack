@@ -2,12 +2,12 @@
 
 📌 **Description**: This is a simple MERN (MongoDB, Express.js, React.js, Node.js) stack application, it serves for building full-stack web applications using these technologies.
 
-## 🚀 Tecnologias  
-- Linguagens: HTML, CSS, JavaScript.  
+## 🚀 Technologies  
+- Programming languages: HTML, CSS, JavaScript.  
 - Frameworks/Libraries: Express.js, React.js, Node.js, Axios.  
 - Tools: Git, MongoDB.  
 
-## ⚙️ Como Executar  
+## ⚙️ How to run  
 1. Clone the repository:  
    ```bash
    git clone git@github.com:Phsla00/crud-mern-stack.git
